@@ -31,6 +31,10 @@ module.exports = {
   plugins: [
     '@/plugins/element-ui'
   ],
+
+  router: {
+    middleware: 'phone'
+  },
   /*
   ** Nuxt.js dev-modules
   */
