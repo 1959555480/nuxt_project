@@ -23,18 +23,18 @@ module.exports = {
   ** Global CSS
   */
   css: [
+    '@/assets/css/global.css',
+    '@/assets/less/global.less',
     'element-ui/lib/theme-chalk/index.css'
   ],
   /*
   ** Plugins to load before mounting the App
   */
   plugins: [
-    '@/plugins/element-ui'
+    '@/plugins/element-ui',
+    '@/plugins/myFun.js',
+    '@/plugins/vue-global.js'
   ],
-
-  router: {
-    middleware: 'phone'
-  },
   /*
   ** Nuxt.js dev-modules
   */
@@ -59,11 +59,11 @@ module.exports = {
   ** Build configuration
   */
   build: {
-    transpile: [/^element-ui/],
+    transpile: [/^element-ui/]
     /*
     ** You can extend webpack config here
     */
-    extend (config, ctx) {
-    }
+    // extend (config, ctx) {
+    // }
   }
 }
